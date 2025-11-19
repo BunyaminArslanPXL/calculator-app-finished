@@ -1,4 +1,4 @@
-name: Dependencies Example
+name: Build Example
 
 on: 
   push: 
@@ -17,7 +17,11 @@ jobs:
      - name: Setup Node.js environment
        uses: actions/setup-node@v6.0.0
 
-     - name: verification
-       run: ls -alhR
+     - name: installing node.js dependencies
+       run: npm install
 
-       
+     - name: Bundle project into ZIP
+       run: zip -r app.zip ./
+
+     - name: verification
+       run: ls -alhR     
