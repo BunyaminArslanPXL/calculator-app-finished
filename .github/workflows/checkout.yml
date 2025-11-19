@@ -1,4 +1,4 @@
-name: Checkout 
+name: Checkout Example
 
 on: 
   push: 
@@ -10,5 +10,7 @@ jobs:
    runs-on: ubuntu-latest
 
    steps: 
-     - name: Checkout
+     - name: Checkout Example
        uses: actions/checkout@v5.0.1
+     - name: verification
+       run: ls -alhR
