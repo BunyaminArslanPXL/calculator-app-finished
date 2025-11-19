@@ -1,0 +1,23 @@
+name: Dependencies Example
+
+on: 
+  push: 
+    branches: 
+      - main 
+
+jobs:
+  installing_dependencies: 
+   runs-on: ubuntu-latest
+
+   steps: 
+     - name: Checkout Example
+       uses: actions/checkout@v5.0.1
+
+
+     - name: Setup Node.js environment
+       uses: actions/setup-node@v6.0.0
+
+     - name: verification
+       run: ls -alhR
+
+       
