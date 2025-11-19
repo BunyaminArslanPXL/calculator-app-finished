@@ -13,8 +13,7 @@ jobs:
      - name: Checkout Example
        uses: actions/checkout@v5.0.1
        
-     - name: Better Test Reports Action
-       uses: mridang/action-test-reporter@v1.7.0
+
 
 
      - name: Setup Node.js environment
@@ -32,5 +31,6 @@ jobs:
        run: npm ci
      - run: npm run build --if-present
      - run: npm test
-
+     - name: Better Test Reports Action
+       uses: mridang/action-test-reporter@v1.7.0
   
