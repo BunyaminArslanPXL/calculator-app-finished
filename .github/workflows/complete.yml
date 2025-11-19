@@ -27,10 +27,9 @@ jobs:
 
      - name: verification
        run: ls -alhR     
-     - name: testing
-       run: npm ci
+
      - run: npm run build --if-present
-     - run: npm test
+     - run: npm test -- --coverage
      - name: Code Coverage Report
        uses: mridang/action-test-reporter@v1
        with:
